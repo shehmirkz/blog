@@ -1,9 +1,11 @@
-import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
+import { useNavigate, Link } from 'react-router-dom';
+
+import "./App.css";
 import SinglePost from "./posts";
-import { useNavigate } from 'react-router-dom';
+
 
 
 const Post = (props) => {
@@ -21,7 +23,8 @@ const Post = (props) => {
             {props.item.body}
           </p>
           
-          <a onClick={ () => {navigation(`/posts/${props.item.id}`)} }>Continue Reading</a>
+          <Link to={`/posts/${props.item.id}`}>Continue Reading</Link>
+          {/* <a onClick={ () => {navigation(`/posts/${props.item.id}`)} }>Continue Reading</a> */}
 
         </Col>
         <Col className="col-b" sm={4}></Col>
