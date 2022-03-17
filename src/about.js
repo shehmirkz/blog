@@ -1,10 +1,9 @@
+import "./App.css";
 
-import './App.css';
-
-function  About() {
+function About() {
   return (
     <div>
-     <h1>Welcome to About Page</h1>
+      <h1>Welcome to About Page</h1>
     </div>
   );
 }
